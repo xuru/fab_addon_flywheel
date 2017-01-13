@@ -1,0 +1,10 @@
+VERSION_MAJOR = 0
+VERSION_MINOR = 1
+VERSION_BUILD = 0
+VERSION_INFO = (VERSION_MAJOR, VERSION_MINOR, VERSION_BUILD)
+VERSION_STRING = "%d.%d.%d" % VERSION_INFO
+AUTHOR_NAME = "Eric Plaster"
+DESCRIPTION = "Adds Flywheel support to Flask-AppBuilder"
+AUTHOR_EMAIL = "plaster@gmail.com"
+
+__version__ = VERSION_INFO
