@@ -1,4 +1,4 @@
-from fab_addon_flywheel import Model as BaseModel
+from flywheel import Model as BaseModel
 
 
 class Model(BaseModel):

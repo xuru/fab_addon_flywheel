@@ -1,12 +1,12 @@
 import uuid
 import datetime
 from flask import g
-from fab_addon_flywheel import Field
+from flywheel import Field
 
 from flask_appbuilder._compat import as_unicode
-from fab_addon_flywheel import set_
+from flywheel import set_
 
-from insitome.admin.appbuilder.models.flywheel import Model
+from fab_addon_flywheel.models import Model
 
 _dont_audit = False
 

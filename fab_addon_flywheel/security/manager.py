@@ -3,10 +3,10 @@ import uuid
 
 from flask_appbuilder import const as c
 from flask_appbuilder.security.manager import BaseSecurityManager
-from insitome.admin.appbuilder.utils import get_pk_value
 from werkzeug.security import generate_password_hash
 
 from fab_addon_flywheel.models.interface import FlywheelInterface
+from fab_addon_flywheel.utils import get_pk_value
 from .models import Permission, PermissionView, RegisterUser, Role, User, ViewMenu
 
 log = logging.getLogger(__name__)

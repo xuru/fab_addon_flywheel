@@ -2,15 +2,16 @@
 import logging
 import sys
 
-from flask.ext.appbuilder._compat import as_unicode
-from flask.ext.appbuilder.const import LOGMSG_ERR_DBI_ADD_GENERIC, LOGMSG_ERR_DBI_DEL_GENERIC, \
+import flywheel
+
+from fab_addon_flywheel import utils
+from flask_appbuilder._compat import as_unicode
+from flask_appbuilder.const import LOGMSG_ERR_DBI_ADD_GENERIC, LOGMSG_ERR_DBI_DEL_GENERIC, \
     LOGMSG_ERR_DBI_EDIT_GENERIC
 from flask_appbuilder.models.base import BaseInterface
-from insitome.admin.appbuilder import utils
-from insitome.admin.appbuilder.utils import FlywheelQueryHelper
 
-import fab_addon_flywheel
 from fab_addon_flywheel.models import filters
+from fab_addon_flywheel.utils import FlywheelQueryHelper
 
 log = logging.getLogger(__name__)
 
@@ -71,49 +72,49 @@ class FlywheelInterface(BaseInterface):
 
     def is_string(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.StringType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.StringType)
         except Exception as e:
             return False
 
     def is_text(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.BinaryType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.BinaryType)
         except Exception as e:
             return False
 
     def is_integer(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.IntType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.IntType)
         except Exception as e:
             return False
 
     def is_numeric(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.NumberType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.NumberType)
         except Exception as e:
             return False
 
     def is_float(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.FloatType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.FloatType)
         except Exception as e:
             return False
 
     def is_boolean(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.BoolType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.BoolType)
         except Exception as e:
             return False
 
     def is_date(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.DateType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.DateType)
         except Exception as e:
             return False
 
     def is_datetime(self, col_name):
         try:
-            return isinstance(self.helper.get_field_type(col_name), fab_addon_flywheel.fields.types.DateTimeType)
+            return isinstance(self.helper.get_field_type(col_name), flywheel.fields.types.DateTimeType)
         except Exception as e:
             return False
 
