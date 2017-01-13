@@ -1,5 +1,5 @@
 import logging
-from flask.ext.appbuilder.basemanager import BaseManager
+from flask_appbuilder.basemanager import BaseManager
 
 log = logging.getLogger(__name__)
 
